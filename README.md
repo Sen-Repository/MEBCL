@@ -25,3 +25,36 @@ conda create -n mebcl && conda activate mebcl
 bash environment.sh
 ```
 The environment can also be created by conda env `create -f environment.yml`
+
+## Start
+
+### Early Cancer Prediction
+
+Example data (e.g., BRCA) is provided in the `test/` directory and can be downloaded for quick testing. If you want to run MEBCL on your own data, please refer to the data preprocessing procedure described in the paper to prepare multi-omics inputs.
+
+Before running the model, please modify the configuration file if necessary.  
+For testing with the provided example data, the default configuration can be used directly.  
+For custom datasets, please update the cancer type name and related settings in the corresponding `.yaml` configuration file.
+
+Run the following command:
+
+```bash
+python main.py
+```
+#### Results include：
+MEBCL outputs a binary prediction indicating Normal or Early-stage cancer for each sample.
+The performance of the model is evaluated using standard classification metrics, including:
+- Accuracy  
+- Precision  
+- Recall  
+- F1-score  
+- AUC
+
+<p align="center">
+<img width="419" height="347" alt="image" src="https://github.com/user-attachments/assets/1b6ac280-cf5b-40c4-af9e-b4a441a47b3a" />
+<img  width="419" height="279" alt="image" src="https://github.com/user-attachments/assets/49b5a370-be36-4bbf-966f-1761de144d44" />
+</p>
+
+Extensive experiments demonstrate that MEBCL consistently outperforms baseline multi-omics methods across multiple cancer types. Ablation studies further indicate that incorporating alternative splicing features significantly improves early cancer prediction performance.
+
+Detailed quantitative results and visualizations are provided in the out/ directory.
