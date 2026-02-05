@@ -1,0 +1,14 @@
+# general
+seed: 42
+
+#cancer_list
+cancer_types: ['LUAD','BRCA','CHOL','SKCM','ACC','KIRC','PAAD','TGCT','ESCA','THCA','LIHC',
+              'READ','UVM', 'BLCA','GBM','MESO','COAD','STAD','KIRP','KICH','LUSC','HNSC','SARC',
+              'UCEC','LAML','CESC','PRAD','OV','UCS','PCPG','THYM','LGG','DLBC']
+
+#view_list
+view_list : ['rnaseq','mirna','psi','cnv','dnaMeth']
+
+
+
+
